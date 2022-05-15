@@ -2,6 +2,9 @@
 # Be Academy DevStart Git e GitHub
 
 Repositório criado para armazenar os principais comandos do git abordados no Programa DevStart da Be Academy em parceria com a PayLivre.
+## Autor
+
+- [@macieljuniormax](https://www.github.com/macieljuniormax)
 
 
 ## Configuração ⚙️
@@ -47,6 +50,10 @@ Exibir histórico de commits
 ``` bash
 git log
 ```
+Exibir histórico de commits em apenas uma linha
+``` bash
+git log --oneline
+```
 ## Ramificações 🔀
 Exibir todas as branchs existentes e indica a que que voc'e está no momento
 ``` bash
@@ -85,5 +92,39 @@ git remote -v
 Enviar as alterações para o repositório remoto
 ``` bash
 git push 
+```
+Atualizar branch atual de acordo com o repositório remoto
+``` bash
+git pull
+```
+## Stash 🔄
+Para alternar entre uma branch é necessário fazer o commit das alterações atuais previamente. Caso haja a necessidade de realizar a troca sem fazer o commit, é possível criar um Stash
+
+
+Cria um stash
+``` bash
+git stash
+```
+Cria um stash incluindo um arquivo que ainda não esteja sendo rastreado
+``` bash
+git stash --include-untracked
+```
+Listar os stashes disponíveis
+``` bash
+git stash list
+```
+Recuperar um stash específico
+``` bash
+git stash pop stash@{x} 
+```
+
+## Revertendo um commit ↩️
+Desfazer o último commit
+``` bash
+git revert HEAD
+```
+Desfazer um commit utilizando os quatro primeiro dígitos hash (xxxx) do commit
+``` bash
+git revert xxxx
 ```
 
